@@ -36,7 +36,8 @@ variable "case1" {
   default = "upper LOWER"
 }
 output "upper_LOWER" {
-   value = "${upper(split(" ", var.case1)[0])}${lower(split(" ", var.case1)[1])}"
+   // value = "${upper(split(" ", var.case1)[0])}${lower(split(" ", var.case1)[1])}" 
+    value= join(" ", [upper(split(" ", var.case1)[0]), lower(split(" ", var.case1)[1])])
 }
 
 /*
