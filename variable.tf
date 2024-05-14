@@ -31,6 +31,14 @@ variable "account_tier"{
   type=string
   default="Standard"
 }
+
+variable "case1" {
+  default = "upper LOWER"
+}
+output "upper_LOWER" {
+   value = "${upper(split(" ", var.case1)[0])}${lower(split(" ", var.case1)[1])}"
+}
+
 /*
 variable "myname"{
   type=string
