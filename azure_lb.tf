@@ -1,7 +1,7 @@
-resource "azurerm_resource_group" "mcit420zz5um" {
+/* resource "azurerm_resource_group" "mcit420zz5um" {
   name     = azurerm_resource_group.mcit420zz5um.name
   location = azurerm_resource_group.mcit420zz5um.location
-}
+} */
 
 resource "azurerm_public_ip" "example" {
   name                = "PublicIPForLB"
