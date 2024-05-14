@@ -31,6 +31,7 @@ variable "account_tier"{
   type=string
   default="Standard"
 }
+/*
 variable "myname"{
   type=string
 }
@@ -62,3 +63,4 @@ variable "summersports"{
     type =list(string)
     default=["soccer","basketball","badminton","tabletennis"]
 }
+*/
