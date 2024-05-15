@@ -8,5 +8,5 @@ resource "azurerm_storage_account" "example" {
 }
 
 resource "azurerm_sql_server" "mock_database" {
-  name                         = azurerm_sql_server.example.name
+  name                         =azurerm_sql_server.example[each.key].name
   }
