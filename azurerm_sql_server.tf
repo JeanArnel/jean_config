@@ -7,6 +7,6 @@ resource "azurerm_storage_account" "example" {
   account_replication_type = "LRS"
 }
 
-resource "azurerm_sql_server" "mock_database" {
+resource "azurerm_sql_server" "mockdatabase" {
   name                         =azurerm_sql_server.example[each.key].name
   }
