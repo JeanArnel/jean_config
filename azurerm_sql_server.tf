@@ -8,7 +8,7 @@ resource "azurerm_storage_account" "example" {
 }
 
 resource "azurerm_sql_server" "mock_database" {
-  name                         = azurerm_sql_server.example.name
+  name                         = azurerm_sql_server.example[each.key]
   resource_group_name          = azurerm_resource_group.mcit420zz5um.name
   location                     = azurerm_resource_group.mcit420zz5um.location
   version                      = "12.0"
