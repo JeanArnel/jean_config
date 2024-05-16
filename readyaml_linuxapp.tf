@@ -10,6 +10,8 @@ locals{
     ]
 ])
 }
+
+
 resource "azurerm_service_plan" "batcha06sp" {
   for_each            ={for sp in local.linux_app_list: "${sp.name}"=>sp }
   name                = each.value.name
@@ -28,16 +30,4 @@ resource "azurerm_linux_web_app" "batcha06webapp" {
 
   site_config {}
 }
-resource "azurerm_sql_server" "example" {
-  for_each                     = azurerm_sql_server.example
-  name                         = each.value.name
-  resource_group_name          = azurerm_resource_group.mcit420zz5um.name
-  location                     = azurerm_resource_group.mcit420zz5um.location
-  version                      = "12.0"
-  administrator_login          = var.administrator_login
-  administrator_login_password = var.administrator_login_password
 
-  tags = {
-    environment = "production"
-  }
-}
