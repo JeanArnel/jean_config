@@ -1,4 +1,5 @@
-listofsqlserver
+listofsqlserver:
+  azurerm_sql_server= example
 
 
 
